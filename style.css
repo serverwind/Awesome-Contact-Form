@@ -1,0 +1,167 @@
+:root {
+  --dark: rgba(0, 0, 10, 0.95);
+  --blue: #3279b7;
+  --gray: #1b1b1b;
+  --lightgray: #aaaaaa;
+  --white: #f4f1f1;
+}
+
+body {
+  background-image: url("bg.jpg");
+  font-family: "Quicksand", sans-serif;
+}
+
+main {
+  max-width: 60%;
+  margin: 0 auto;
+  color: var(--white);
+}
+
+h1 {
+  color: var(--white);
+  text-align: center;
+  margin: 4rem 0;
+  font-size: 3rem;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 2fr auto;
+  gap: 3rem;
+  background-color: var(--dark);
+  padding: 3rem;
+  border-radius: 3px;
+}
+
+.col1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.col1 input[type="text"],
+.col1 textarea {
+  background-color: var(--dark);
+  color: var(--white);
+  border: 1px solid var(--lightgray);
+  border-radius: 3px;
+  padding: 0.5rem;
+}
+
+.col1 input[type="button"] {
+  background-color: var(--blue);
+  color: var(--white);
+  font-weight: bold;
+  border: 0;
+  border-radius: 3px;
+  padding: 0.5rem;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.col1 input[type="button"]:hover {
+  background-color: var(--gray);
+}
+
+.col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.location,
+.phone,
+.email {
+  display: grid;
+  grid-template-columns: 20px auto;
+  align-items: center;
+  gap: 25px;
+  font-size: 1.2rem;
+  color: var(--lightgray);
+}
+
+.location i,
+.phone i {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  gap: 10px;
+  border-top: 2px solid var(--gray);
+  border-bottom: 2px solid var(--gray);
+  padding: 1rem;
+}
+
+.socials i {
+  border-radius: 50%;
+  padding: 10px 12px;
+  background-color: var(--gray);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.socials i:hover {
+  background-color: var(--blue);
+}
+
+.credits {
+  color: var(--lightgray);
+  text-align: center;
+  margin: 0;
+}
+
+.error {
+  border: 1px solid red!important;
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+}
+
+/* RESPONSIVENESS */
+
+@media only screen and (max-width: 600px) {
+  main {
+    max-width: 95%;
+  }
+  .contact-form {
+    display: block;
+  }
+  .col2 {
+    margin-top: 3rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  main {
+    max-width: 80%;
+  }
+  .contact-form {
+    display: grid;
+    gap: 1rem;
+    padding: 3rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  main {
+    max-width: 99%;
+  }
+  .contact-form {
+    padding: 1rem;
+  }
+  .location,
+  .phone,
+  .email {
+    font-size: 1rem;
+  }
+  .location i,
+  .phone i {
+    font-size: 1.5rem;
+  }
+}
